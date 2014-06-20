@@ -6,5 +6,5 @@ Hacker School Interview Prep sessions.
 To run unit tests:
 
 ```python
-python -m unittest ```<name of module>```
+python -m unittest <name of module>
 ```
