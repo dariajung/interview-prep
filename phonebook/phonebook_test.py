@@ -12,6 +12,8 @@ class TestPhonebook(unittest.TestCase):
         name = "John Michael"
         number = '123 456 4323'
 
+        self.test_create()
+
         self.assertEqual(phonebook.add(name, number, pb), "John Michael has been added to the phonebook.")
 
         name2 = "John Doe"
@@ -30,6 +32,28 @@ class TestPhonebook(unittest.TestCase):
 
         self.test_add()
         self.assertEqual(phonebook.lookup(name2, pb), "John Michael 123 456 4323\nJohn Doe 398 291 9281\n")
+
+    def test_change(self):
+        pb = "phonebook.pb"
+        name = "John Michael"
+        new_number = '234 521 2332'
+
+        self.assertEqual(phonebook.change(name, new_number, pb), "John Michael 234 521 2332")
+
+    def test_reverse_lookup(self):
+        pb = "phonebook.pb"
+        number = '234 521 2332'
+
+        self.test_add()
+        self.test_change()
+
+        self.assertEqual(phonebook.reverse_lookup(number, pb), "John Michael 234 521 2332")
+
+    def test_remove(self):
+        pb = "phonebook.pb"
+        name = "John Michael"
+
+        self.assertEqual(phonebook.remove(name, pb), "Removed John Michael from the phonebook.")
 
 
 if __name__ == '__main__':

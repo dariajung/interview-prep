@@ -83,15 +83,18 @@ def change(person, new_num, phonebook_name):
         persons = phonebook.original[first]
 
         if person in persons:
-            persons[person] = new_num
+            phonebook.reversed[new_num] = phonebook.reversed.pop(persons[person])
 
+            persons[person] = new_num
             return_msg = "%s %s" %(person, persons[person])
 
         else:
             return_msg = "Nothing to change."
 
     else: 
-        return_msg = "Nothing to change."
+        return_msg = "This person does not exist."
+
+    #print phonebook.reversed
 
     dump(phonebook_name, phonebook)
     return return_msg
@@ -104,6 +107,7 @@ def remove(person, phonebook_name):
         persons = phonebook.original[first]
 
         if person in persons:
+            del phonebook.reversed[persons[person]]
             del persons[person]
             return_msg = "Removed %s from the phonebook." %(person)
 

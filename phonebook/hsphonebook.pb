@@ -5,13 +5,13 @@ p0
 S'reversed'
 p2
 (dp3
-S'398 291 9281'
+S'234 521 2332'
 p4
-S'John Doe'
-p5
-sS'123 456 4323'
-p6
 S'John Michael'
+p5
+sS'133 492 1932'
+p6
+S'John Doe'
 p7
 ssS'original'
 p8
@@ -21,8 +21,7 @@ p10
 (dp11
 S'John Michael'
 p12
-g6
-sS'John Doe'
-p13
 g4
+sg7
+g6
 sssb.
