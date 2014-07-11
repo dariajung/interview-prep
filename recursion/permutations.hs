@@ -2,7 +2,7 @@
 
 import Data.List
 
-permute :: [a] -> [[a]]
+permute :: Eq a => [a] -> [[a]]
 permute [] = [[]]
 permute xs = [y | prefix <- xs, y <- map (prefix:) $ permute $ xs \\ [prefix]]
 
