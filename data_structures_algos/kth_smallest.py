@@ -8,9 +8,12 @@ def k_smallest(_list, k):
         d[i] = "whatever"
 
     for i, v in enumerate(d):
+        if k > len(d):
+            return None
+
         if i == (k - 1):
             return v
 
 if __name__ == "__main__":
     test = [7, 4, 8, 11, 2, 5]
-    print k_smallest(test, 1)
+    print k_smallest(test, 10)
