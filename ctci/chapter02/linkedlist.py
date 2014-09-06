@@ -26,6 +26,23 @@ class LinkedList():
             print current.value
             current = current.next
 
+    def delete(self, value):
+        current = self.head
+
+        # head is value to be deleted
+        if current.value == value:
+            self.head = current.next
+
+        else:
+            while (current.next != None):
+                if current.next.value == value:
+                    next = current.next
+                    current.next = next.next
+                    break
+                else:
+                    current = current.next
+
+
     def reverse(self):
         current = self.head
         prev = None
@@ -46,6 +63,9 @@ if __name__ == "__main__":
     for i in range(10):
         _list.push(i)
 
-    _list.traverse()
+    # _list.traverse()
 
-    _list.reverse()
+    # _list.reverse()
+
+    _list.delete(3)
+    _list.traverse()
