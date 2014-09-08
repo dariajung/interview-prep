@@ -15,8 +15,6 @@ def kth_to_last(_list, k):
 
     return current.value 
 
-
-
 if __name__ == "__main__":
     linked = linkedlist.LinkedList()
 
