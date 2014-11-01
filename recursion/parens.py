@@ -10,7 +10,7 @@ def parens(all_strs, left_rem, right_rem, current_str):
     if left_rem == 0 and right_rem == 0:
         # YAY WE ARE DONE
         all_strs.append(current_str)
-        return all_strs
+        #return all_strs
 
     if left_rem > 0:
         new_str = current_str + "("
