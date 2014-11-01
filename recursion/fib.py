@@ -6,11 +6,6 @@ memoize = {0: 0, 1: 1}
 
 
 def fib(n):
-    if n == 0:
-        return memoize[0]
-    if n == 1:
-        return memoize[1]
-
     if n in memoize:
         return memoize[n]
     else:
